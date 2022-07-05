@@ -9,29 +9,22 @@
 
 body {
   background-color: #0f0f0f;
-  color: #F3F3F3;
+  color: #f3f3f3;
 }
 
 .categoria-lista {
   display: flex;
   cursor: pointer;
-  overflow-y: visible;
-  overflow-x: scroll;
-  height: 20rem;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  scroll-behavior: smooth;
-  scroll-snap-type: inline mandatory;
+  overflow: hidden;
 }
 
-.categoria-lista::-webkit-scrollbar{
-  display: none;
-}
 
 .categoria-lista img{
   height: 16rem;
+  width: 400px;
   transform: scale(0.9);
   transition: ease .2s;
+
 }
 
 .categoria-lista img:hover{
@@ -39,4 +32,27 @@ body {
   transition: .2s;
 }
 
+.botao-lista{
+  position: absolute;
+  height: 16rem;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.10);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: ease .2s;
+}
+
+.botao-lista:hover{
+  transition: ease .2s;
+  transform: scale(1.2);
+}
+
+.categoria-esquerda{
+  left: 0;
+}
+
+.categoria-direita{
+  right: 0;
+}
 
